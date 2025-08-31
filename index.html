@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emegency Call Service</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@ 5" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <nav>
+     <div class="flex justify-between max-w-[1200px] mx-auto">
+         <div class="nav-left flex justify-between items-center  mt-5">
+       <div >
+        <img src="./assets/logo.png" alt="" class="logo max-w-[60px]">
+       </div>
+       <h2 class="font-semibold pl-5">Emergency<br> Service</h2>
+
+     </div>
+     <div class="nav-right flex justify-between font-semibold ">
+         
+
+          <div class="flex justify-between items-center rounded-2xl bg-[#41ff6b1a] m-2">
+           <span id="heartCount" >0</span><img src="./assets/heart.png" alt="" class="max-w-[30px]">
+          </div>
+          <div class="flex justify-between items-center p-2  rounded-2xl bg-[#41ff6b1a] m-2">
+           <span id="coins">100</span> <img src="./assets/coin.png" alt="" class="max-w-[30px]">
+          </div>
+          <div class="flex justify-between items-center bg-[#00a63e] rounded-2xl p-2 m-2">
+            <p><span id="copyCount" class="pl-2">0</span>Copy</p>
+          </div>
+     </div>
+     </div>
+  </nav>
+   <section class="banner w-full flex flex-col items-center bg-[radial-gradient(ellipse_at_center,#006747,#013223)] p-8 text-white">
+        
+        <div class="p-2"><img src="./assets/logo-dark.png" alt="" class=" max-w-[100px] "></div>
+        <h2 class="text-lg font-semibold">Emergency Service Directory</h2>
+        <p class="text-sm font-regular">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+
+        
+   </section>
+
+   <section class="card-section  bg-[#f5fff6] flex justify-between">
+       <div class="card-container grid grid-cols-3 max-w-[1200px] mx-auto ">
+           <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+            <div class="card bg-white rounded-xl p-10 m-5">
+
+             <div class="card-top flex justify-between pb-4 ">
+                <div class="service-logo ">
+                  <img src="./assets/emergency.png" alt="" class=" max-w-[30px]  rounded-xl bg-[#ffe3e2] ">
+                </div>
+                <div class="heart" onclick="addHeart(this)"><i class="bi bi-heart"></i></div>
+              </div>
+             <h1 class="font-semibold text-lg">National Emergency Number</h1>
+             <p class="font-regular text-md pb-4">National Emergency</p>
+            
+              <p class="font-semibold text-lg">999</p>
+              <p>ALL</p>
+              <div class="service-btn flex justify-between pt-5">
+                <button class="btn btn-copy w-[calc(50%-20px)]" onclick="copyNumber('999')">Copy</button>
+              <button class="btn btn-call  w-[calc(50%-20px)] bg-[#00a63e] " onclick="makeCall('Emergency Call','999')"><i class="bi bi-telephone"></i>Call</button>
+              </div>
+            </div>
+       </div>
+       <aside class="flex justify-between min-w-[300px] bg-white rounded-2xl mt-5 text-regular font-semibold mr-5 mb-5">
+          <h3 class="p-5"><i class="bi bi-stopwatch-fill pr-2"></i>Call History</h3>
+          <div id="history" class="p-5">
+            <button id="clear-btn" onclick="clearHistory()">Clear</button>
+          </div>
+          
+    </aside>
+   </section>
+
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
