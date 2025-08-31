@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // COPY BUTTONS
+   
     // COPY BUTTONS
 const copyCountEl = document.getElementById("copyCount");
 let totalCopies = 0;
@@ -68,7 +68,7 @@ copyButtons.forEach(button => {
         navigator.clipboard.writeText(serviceNumber)
             .then(() => {
                 alert(`Number ${serviceNumber} copied to clipboard!`);
-                // increment copy counter
+                 // increment copy counter
                 totalCopies++;
                 copyCountEl.textContent = totalCopies;
             })
@@ -78,7 +78,7 @@ copyButtons.forEach(button => {
     });
 });
 
-    // CLEAR HISTORY
+// CLEAR HISTORY
     clearHistoryBtn.addEventListener('click', () => {
         historyList.innerHTML = '';
     });
